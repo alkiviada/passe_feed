@@ -19,7 +19,7 @@ from rest_framework import routers
 from pdb_store import views
 
 router = routers.DefaultRouter()
-router.register(r'letters', views.LetterViewSet)
+router.register(r'letters', views.LetterViewSet, 'Letter')
 
 
 urlpatterns = [

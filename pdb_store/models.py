@@ -5,9 +5,13 @@ from django.db import models
 class Letter(models.Model):
     author = models.ForeignKey('Author', on_delete=models.CASCADE, related_name='author_letters', null=True)
     def __str__(self):
-        return self.pk
+      return str(self.pk)
+
+    def __unicode__(self):
+      return self.pk
+    
     class Meta:
-        ordering = ('pk',)
+      ordering = ('pk',)
 
 class Page(models.Model):
     letter = models.ForeignKey(Letter, on_delete=models.CASCADE, related_name='letter_pages', null=True)
