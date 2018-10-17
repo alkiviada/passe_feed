@@ -1,0 +1,35 @@
+:root {
+  --sky-color: #84a6d2;
+  --body-font: GFS Didot;
+  --title-font: Alegreya Sans;;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  background: var(--sky-color);
+  font-family: var(--body-font);
+  max-height: 100%;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+
+.feed-title {
+  font-weight: 600;
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  text-shadow: rgba(10,10,10,0.75) 0px 1px 0.5px;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.feed-item {
+  border: 1px solid blue;
+  font-weight: 600;
+  color: black;
+  background: #FBB152;
+  height: 150px;
+  overflow: auto;
+};

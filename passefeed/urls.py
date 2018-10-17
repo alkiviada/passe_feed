@@ -19,9 +19,10 @@ from rest_framework import routers
 from pdb_store import views
 
 router = routers.DefaultRouter()
-router.register(r'letters', views.LetterViewSet, 'Letter')
+router.register(r'feed', views.FeedItemViewSet, 'feed_item')
 
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url('^$', include('frontend.urls')),
+    url(r'^api/', include(router.urls)),
 ]

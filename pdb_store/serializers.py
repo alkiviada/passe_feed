@@ -6,16 +6,15 @@ class AuthorSerializer(serializers.ModelSerializer):
         model = Author
         fields = ('name', )
 
-class PageSerializer(serializers.ModelSerializer):
+class PartSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Page
-        fields = ('page', )
+        model = Part
+        fields = ('part', )
 
 
-class LetterSerializer(serializers.ModelSerializer):
-    letter_pages = PageSerializer(many=True)
-    author = AuthorSerializer()
+class FeedItemSerializer(serializers.ModelSerializer):
+    item_parts = PartSerializer(many=True)
     class Meta:
-        model = Letter
-        fields = ('author', 'letter_pages')
+        model = FeedItem
+        fields = ('item_parts', )
 

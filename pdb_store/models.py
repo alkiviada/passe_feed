@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 
-class Letter(models.Model):
-    author = models.ForeignKey('Author', on_delete=models.CASCADE, related_name='author_letters', null=True)
+class FeedItem(models.Model):
+    author = models.ForeignKey('Author', on_delete=models.CASCADE, related_name='author_items', null=True)
     def __str__(self):
       return str(self.pk)
 
@@ -13,11 +13,11 @@ class Letter(models.Model):
     class Meta:
       ordering = ('pk',)
 
-class Page(models.Model):
-    letter = models.ForeignKey(Letter, on_delete=models.CASCADE, related_name='letter_pages', null=True)
-    page = models.TextField()
+class Part(models.Model):
+    feed_item = models.ForeignKey(FeedItem, on_delete=models.CASCADE, related_name='item_parts', null=True)
+    part = models.TextField()
     def __str__(self):
-        return self.page
+        return self.part
     class Meta:
         ordering = ('pk',)
 
