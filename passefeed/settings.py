@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'pdb_store.apps.PdbStoreConfig',
     'rest_framework',
     'frontend',
+    'django_s3_storage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
