@@ -30,6 +30,7 @@ class FeedItemViewSet(viewsets.ModelViewSet):
         items.extend(item)
       
     serializer = FeedItemSerializer(items, many=True)
+    print('I am returning some feeds')
     return Response(serializer.data)
 
   serializer_class = FeedItemSerializer

@@ -1,7 +1,7 @@
 :root {
   --sky-color: #84a6d2;
   --body-font: GFS Didot;
-  --title-font: Alegreya Sans;;
+  --title-font: Alegreya Sans;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
-    -moz-background-clip: text;
+  -moz-background-clip: text;
 }
 
 .feed-item {
