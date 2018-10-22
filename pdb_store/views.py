@@ -24,7 +24,7 @@ class FeedItemViewSet(viewsets.ModelViewSet):
     fi_min_pk = queryset.aggregate(Min('pk'))['pk__min']
     fi_max_pk = queryset.aggregate(Max('pk'))['pk__max']
     items = []
-    while len(items) < 3:
+    while len(items) < 6:
       item = queryset.filter(pk=randint(fi_min_pk, fi_max_pk))
       if item:
         items.extend(item)
